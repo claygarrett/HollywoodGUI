@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		E96266971DA5ECDA00B52F9C /* HollywoodGUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E962668D1DA5ECDA00B52F9C /* HollywoodGUI.framework */; };
 		E962669C1DA5ECDA00B52F9C /* HollywoodGUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E962669B1DA5ECDA00B52F9C /* HollywoodGUITests.swift */; };
-		E962669E1DA5ECDA00B52F9C /* HollywoodGUI.h in Headers */ = {isa = PBXBuildFile; fileRef = E96266901DA5ECDA00B52F9C /* HollywoodGUI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E98A34A61DA5EF14002E951C /* HollywoodGUI.h in Headers */ = {isa = PBXBuildFile; fileRef = E98A34A51DA5EF14002E951C /* HollywoodGUI.h */; };
+		E98A34A81DA5EF1E002E951C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E98A34A71DA5EF1E002E951C /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,11 +25,11 @@
 
 /* Begin PBXFileReference section */
 		E962668D1DA5ECDA00B52F9C /* HollywoodGUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HollywoodGUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E96266901DA5ECDA00B52F9C /* HollywoodGUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HollywoodGUI.h; sourceTree = "<group>"; };
-		E96266911DA5ECDA00B52F9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E96266961DA5ECDA00B52F9C /* HollywoodGUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HollywoodGUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		E962669B1DA5ECDA00B52F9C /* HollywoodGUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HollywoodGUITests.swift; sourceTree = "<group>"; };
-		E962669D1DA5ECDA00B52F9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E962669B1DA5ECDA00B52F9C /* HollywoodGUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HollywoodGUITests.swift; path = ../Tests/HollywoodGUITests.swift; sourceTree = "<group>"; };
+		E962669D1DA5ECDA00B52F9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Tests/Info.plist; sourceTree = "<group>"; };
+		E98A34A51DA5EF14002E951C /* HollywoodGUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HollywoodGUI.h; path = Source/HollywoodGUI.h; sourceTree = SOURCE_ROOT; };
+		E98A34A71DA5EF1E002E951C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +54,8 @@
 		E96266831DA5ECDA00B52F9C = {
 			isa = PBXGroup;
 			children = (
-				E962668F1DA5ECDA00B52F9C /* HollywoodGUI */,
-				E962669A1DA5ECDA00B52F9C /* HollywoodGUITests */,
+				E962668F1DA5ECDA00B52F9C /* Source */,
+				E962669A1DA5ECDA00B52F9C /* Tests */,
 				E962668E1DA5ECDA00B52F9C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,22 +69,24 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E962668F1DA5ECDA00B52F9C /* HollywoodGUI */ = {
+		E962668F1DA5ECDA00B52F9C /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				E96266901DA5ECDA00B52F9C /* HollywoodGUI.h */,
-				E96266911DA5ECDA00B52F9C /* Info.plist */,
+				E98A34A71DA5EF1E002E951C /* Info.plist */,
+				E98A34A51DA5EF14002E951C /* HollywoodGUI.h */,
 			);
+			name = Source;
 			path = HollywoodGUI;
 			sourceTree = "<group>";
 		};
-		E962669A1DA5ECDA00B52F9C /* HollywoodGUITests */ = {
+		E962669A1DA5ECDA00B52F9C /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				E962669B1DA5ECDA00B52F9C /* HollywoodGUITests.swift */,
 				E962669D1DA5ECDA00B52F9C /* Info.plist */,
 			);
-			path = HollywoodGUITests;
+			name = Tests;
+			path = GUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,7 +96,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E962669E1DA5ECDA00B52F9C /* HollywoodGUI.h in Headers */,
+				E98A34A61DA5EF14002E951C /* HollywoodGUI.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +184,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E98A34A81DA5EF1E002E951C /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +404,7 @@
 				E96266A31DA5ECDA00B52F9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E96266A41DA5ECDA00B52F9C /* Build configuration list for PBXNativeTarget "HollywoodGUITests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +413,7 @@
 				E96266A61DA5ECDA00B52F9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
